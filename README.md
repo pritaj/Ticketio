@@ -1,6 +1,6 @@
 # Ticketo
 
-Gyakorló projekt: eseményjegy-ertekesito platform (backend + frontend), a Nissines fejlesztoi munkara valo felkeszules resze.
+Gyakorlo projekt: esemenyjegy-ertekesito platform (backend + frontend), a Nissines fejlesztoi munkara valo felkeszules resze.
 
 ## Architektura
 
@@ -11,9 +11,33 @@ Lasd: [docs/decisions/](docs/decisions/) az architekturalis dontesekert.
 
 ## Elofeltetelek
 
-- Node.js (v22+)
+- Node.js (v20+, teszteltuk v22-vel)
 - npm
 
-## Inditas
+## Inditas (fejlesztoi mod)
 
-_(Etap 0 alatt frissul, ahogy a backend es frontend elkeszul.)_
+Ket kulon terminalablak kell, mert a ket app kulon porton fut.
+
+### 1. Backend
+
+```
+cd backend
+npm install
+copy .env.example .env
+npm run start:dev
+```
+
+Elerheto: http://localhost:3000/api/health
+
+### 2. Frontend
+
+```
+cd frontend
+npm install
+copy .env.example .env
+npm run dev
+```
+
+Elerheto: http://localhost:5173
+
+A frontend a `VITE_API_URL` kornyezeti valtozobol olvassa ki, hol talalja a backendet (lasd `frontend/.env.example`) - nincs hardkodolt cim a kodban.
