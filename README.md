@@ -41,3 +41,10 @@ npm run dev
 Elerheto: http://localhost:5173
 
 A frontend a `VITE_API_URL` kornyezeti valtozobol olvassa ki, hol talalja a backendet (lasd `frontend/.env.example`) - nincs hardkodolt cim a kodban.
+
+## Tesztek
+
+```
+cd backend
+npm test
+```
