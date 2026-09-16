@@ -16,5 +16,8 @@
     "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true
-  }
+  },
+  "exclude": [
+    "prisma.config.ts"
+  ]
 }

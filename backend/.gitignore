@@ -1,0 +1,13 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+/src/generated/prisma
+
+# AI eszközök "skills" mappái (Prisma CLI generálja, nem kell verziókezelni)
+.claude/
+.cursor/
+.windsurf/
+.agents/
+.devin/
+skills-lock.json

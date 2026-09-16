@@ -7,3 +7,9 @@ build/
 coverage/
 .DS_Store
 *.tsbuildinfo
+.claude/
+.cursor/
+.windsurf/
+.agents/
+.devin/
+skills-lock.json
