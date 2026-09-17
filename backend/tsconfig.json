@@ -18,6 +18,7 @@
     "esModuleInterop": true
   },
   "exclude": [
-    "prisma.config.ts"
+    "prisma.config.ts",
+    "prisma/**"
   ]
 }
