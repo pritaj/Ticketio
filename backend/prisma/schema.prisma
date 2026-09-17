@@ -19,6 +19,7 @@ model User {
   role          String
   created_at    DateTime @default(now())
   events        Event[]
+  @@map("users")
 }
 
 model Venue {
@@ -28,6 +29,7 @@ model Venue {
   city     String
   capacity Int
   events   Event[]
+  @@map("venues")
   }
 
 model Event {
@@ -43,6 +45,7 @@ model Event {
   status        String
   created_at    DateTime @default(now())
   tickets       Ticket_type[]
+  @@map("events")
 }
 
 model Ticket_type {
@@ -54,4 +57,5 @@ model Ticket_type {
   quantity_total Int
   quantity_sold  Int
   sales_start_at DateTime @default(now())
+  @@map("ticket_types")
   }
