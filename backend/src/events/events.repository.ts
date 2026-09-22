@@ -5,16 +5,25 @@ import { PrismaService } from '../prisma/prisma.service';
 export class EventsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  // TODO: Rita - írd meg itt az összes esemény lekérdezését (prisma.event...)
   async findAll() {
-    const events = await this.prisma.event.findMany();
+    const events = await this.prisma.event.findMany({
+      include: {
+        venue: true,
+      },
+    });
 
     return events;
   }
 
-  // TODO: Rita - írd meg itt egy esemény lekérdezését id alapján
   async findOne(id: number) {
-    const event = await this.prisma.event.findUnique({ where: { id: id } });
+    const event = await this.prisma.event.findUnique({
+      where: {
+        id: id,
+      },
+      include: {
+        venue: true,
+      },
+    });
     return event;
   }
 }

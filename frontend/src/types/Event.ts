@@ -2,7 +2,14 @@ export interface Event {
   id: number;
   title: string;
   description: string;
-  city: string;
   startsAt: string;
-  capacity: number;
+  endsAt: string;
+  status: string;
+  venue: {
+    id: number;
+    name: string;
+    address: string;
+    city: string;
+    capacity: number;
+  };
 }

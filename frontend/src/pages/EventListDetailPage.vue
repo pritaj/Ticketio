@@ -50,8 +50,8 @@ watch(
     <div v-else-if="event">
       <h1>{{ event.title }}</h1>
       <p>{{ event.description }}</p>
-      <p>{{ event.city }} - {{ event.startsAt }}</p>
-      <p>Kapacitás: {{ event.capacity }}</p>
+      <p>{{ event.venue.city }} - {{ event.startsAt }}</p>
+      <p>Kapacitás: {{ event.venue.capacity }}</p>
     </div>
   </div>
 </template>

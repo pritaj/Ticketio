@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { EventsRepository } from './events.repository';
+import { EventResponseDto } from './dto/event-response.dto';
 
 @Injectable()
 export class EventsService {
@@ -7,11 +8,16 @@ export class EventsService {
 
   async findAll() {
     const events = await this.evr.findAll();
-    return events;
+    const dtos = events.map((event) => EventResponseDto.fromEntity(event));
+    return dtos;
   }
 
   async findOne(id: number) {
     const event = await this.evr.findOne(id);
-    return event;
+    if (!event) {
+      return null;
+    }
+    const dto = EventResponseDto.fromEntity(event);
+    return dto;
   }
 }
